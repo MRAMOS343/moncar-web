@@ -1,0 +1,283 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Professional auto parts industry design system */
+
+@layer base {
+  :root {
+    /* Base colors - Professional automotive theme */
+    --background: 0 0% 100%;
+    --foreground: 220 15% 15%;
+    
+    /* Card system */
+    --card: 0 0% 100%;
+    --card-foreground: 220 15% 15%;
+    
+    /* Popovers */
+    --popover: 0 0% 100%;
+    --popover-foreground: 220 15% 15%;
+    
+    /* Primary - Professional red for highlights */
+    --primary: 0 84% 60%;
+    --primary-foreground: 0 0% 98%;
+    --primary-hover: 0 84% 55%;
+    --primary-light: 0 84% 90%;
+    
+    /* Secondary - Neutral professional */
+    --secondary: 210 20% 96%;
+    --secondary-foreground: 220 15% 25%;
+    --secondary-hover: 210 20% 92%;
+    
+    /* Muted elements */
+    --muted: 210 20% 96%;
+    --muted-foreground: 220 10% 45%;
+    
+    /* Accent - Orange for actions and alerts */
+    --accent: 25 95% 53%;
+    --accent-foreground: 0 0% 98%;
+    --accent-hover: 25 95% 47%;
+    
+    /* Success - Green for positive actions */
+    --success: 142 76% 36%;
+    --success-foreground: 0 0% 98%;
+    --success-light: 142 76% 90%;
+    
+    /* Info - Blue for informational */
+    --info: 214 84% 56%;
+    --info-foreground: 0 0% 98%;
+    --info-light: 214 84% 90%;
+    
+    /* Warning - Amber for cautions */
+    --warning: 45 93% 47%;
+    --warning-foreground: 0 0% 98%;
+    --warning-light: 45 93% 90%;
+    
+    /* Destructive - Red for errors */
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 98%;
+    --destructive-light: 0 84% 90%;
+    
+    /* Borders and inputs */
+    --border: 214 32% 91%;
+    --input: 214 32% 91%;
+    --ring: 214 84% 56%;
+    
+    /* Radius system */
+    --radius: 0.75rem;
+    --radius-sm: 0.5rem;
+    --radius-lg: 1rem;
+    
+    /* Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--primary-hover)));
+    --gradient-accent: linear-gradient(135deg, hsl(var(--accent)), hsl(var(--accent-hover)));
+    --gradient-subtle: linear-gradient(180deg, hsl(var(--background)), hsl(var(--muted)));
+    
+    /* Shadows */
+    --shadow-sm: 0 1px 2px 0 hsl(var(--primary) / 0.05);
+    --shadow-md: 0 4px 6px -1px hsl(var(--primary) / 0.1), 0 2px 4px -1px hsl(var(--primary) / 0.06);
+    --shadow-lg: 0 10px 15px -3px hsl(var(--primary) / 0.1), 0 4px 6px -2px hsl(var(--primary) / 0.05);
+    --shadow-xl: 0 20px 25px -5px hsl(var(--primary) / 0.1), 0 10px 10px -5px hsl(var(--primary) / 0.04);
+
+    /* Chart colors */
+    --chart-1: 214 84% 56%;
+    --chart-2: 142 76% 36%;
+    --chart-3: 45 93% 47%;
+    --chart-4: 0 84% 60%;
+    --chart-5: 25 95% 53%;
+    --sidebar-background: 0 0% 98%;
+
+    --sidebar-foreground: 240 5.3% 26.1%;
+
+    --sidebar-primary: 240 5.9% 10%;
+
+    --sidebar-primary-foreground: 0 0% 98%;
+
+    --sidebar-accent: 240 4.8% 95.9%;
+
+    --sidebar-accent-foreground: 240 5.9% 10%;
+
+    --sidebar-border: 220 13% 91%;
+
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    /* Dark theme for professional look */
+    --background: 220 20% 8%;
+    --foreground: 0 0% 95%;
+    
+    --card: 220 20% 10%;
+    --card-foreground: 0 0% 95%;
+    
+    --popover: 220 20% 10%;
+    --popover-foreground: 0 0% 95%;
+    
+    --primary: 214 84% 56%;
+    --primary-foreground: 0 0% 98%;
+    --primary-hover: 214 84% 60%;
+    --primary-light: 214 84% 20%;
+    
+    --secondary: 220 20% 15%;
+    --secondary-foreground: 0 0% 90%;
+    --secondary-hover: 220 20% 18%;
+    
+    --muted: 220 20% 15%;
+    --muted-foreground: 220 10% 60%;
+    
+    --accent: 25 95% 53%;
+    --accent-foreground: 0 0% 98%;
+    --accent-hover: 25 95% 57%;
+    
+    --success: 142 76% 36%;
+    --success-foreground: 0 0% 98%;
+    --success-light: 142 76% 20%;
+    
+    --info: 214 84% 56%;
+    --info-foreground: 0 0% 98%;
+    --info-light: 214 84% 20%;
+    
+    --warning: 45 93% 47%;
+    --warning-foreground: 0 0% 98%;
+    --warning-light: 45 93% 20%;
+    
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 98%;
+    --destructive-light: 0 84% 20%;
+    
+    --border: 220 20% 20%;
+    --input: 220 20% 15%;
+    --ring: 214 84% 56%;
+    
+    /* Chart colors for dark mode */
+    --chart-1: 214 84% 56%;
+    --chart-2: 142 76% 45%;
+    --chart-3: 45 93% 55%;
+    --chart-4: 0 84% 65%;
+    --chart-5: 25 95% 60%;
+
+    /* Dark mode sidebar */
+    --sidebar-background: 220 20% 8%;
+    --sidebar-foreground: 0 0% 90%;
+    --sidebar-primary: 214 84% 56%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 220 20% 15%;
+    --sidebar-accent-foreground: 0 0% 90%;
+    --sidebar-border: 220 20% 20%;
+    --sidebar-ring: 214 84% 56%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+  }
+}
+
+@layer components {
+  /* Professional component styles */
+  .kpi-card {
+    @apply bg-card border border-border rounded-xl p-6 shadow-sm hover:shadow-md transition-shadow;
+  }
+  
+  .data-table {
+    @apply bg-card border border-border rounded-xl overflow-hidden;
+  }
+  
+  .chart-card {
+    @apply bg-card border border-border rounded-xl p-6 shadow-sm;
+  }
+  
+  /* Recharts theming */
+  .recharts-pie .recharts-label tspan,
+  .recharts-pie .recharts-text tspan {
+    fill: hsl(var(--foreground)) !important;
+  }
+  
+  .status-badge-success {
+    @apply bg-success/10 text-success border border-success/20 rounded-full px-3 py-1 text-sm font-medium;
+  }
+  
+  .status-badge-warning {
+    @apply bg-warning/10 text-warning border border-warning/20 rounded-full px-3 py-1 text-sm font-medium;
+  }
+  
+  .status-badge-error {
+    @apply bg-destructive/10 text-destructive border border-destructive/20 rounded-full px-3 py-1 text-sm font-medium;
+  }
+  
+  .professional-gradient {
+    background: var(--gradient-primary);
+  }
+  
+  .sidebar-item-active {
+    @apply bg-primary text-primary-foreground font-medium shadow-sm py-4 px-3;
+  }
+  
+  .sidebar-item {
+    @apply hover:bg-secondary-hover transition-colors duration-200 py-4 px-3;
+  }
+
+  /* Hover Lift Animation */
+  .hover-lift {
+    @apply transition-all duration-300 hover:-translate-y-1 hover:shadow-lg;
+  }
+
+  /* Button Hover Effects */
+  .btn-hover {
+    @apply transition-all duration-200 active:scale-95 hover:shadow-md;
+  }
+
+  /* Card Hover Effects */
+  .card-hover {
+    @apply transition-all duration-300 hover:shadow-xl hover:border-primary/20;
+  }
+
+  /* Smooth Transitions */
+  .smooth-transition {
+    @apply transition-all duration-300 ease-in-out;
+  }
+
+  /* Glow Effect */
+  .glow-effect {
+    @apply transition-shadow duration-300 hover:shadow-[0_0_20px_rgba(var(--primary),0.3)];
+  }
+
+  /* Touch Targets - Minimum 44x44px for mobile */
+  .touch-target {
+    @apply min-h-[44px] min-w-[44px];
+  }
+
+  /* Responsive Utilities */
+  .responsive-padding {
+    @apply px-3 py-2 sm:px-4 sm:py-3 md:px-6 md:py-4;
+  }
+
+  .responsive-text {
+    @apply text-sm sm:text-base;
+  }
+
+  .responsive-heading {
+    @apply text-xl sm:text-2xl md:text-3xl;
+  }
+
+  /* Mobile-first input styling */
+  .mobile-input {
+    @apply h-12 text-base sm:h-10 sm:text-sm touch-target;
+  }
+  
+  /* Mobile-friendly select */
+  .mobile-select {
+    @apply h-12 text-base sm:h-10 sm:text-sm;
+  }
+  
+  /* Mobile button */
+  .mobile-button {
+    @apply h-12 px-6 text-base sm:h-10 sm:px-4 sm:text-sm;
+  }
+}
+
